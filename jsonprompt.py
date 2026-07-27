@@ -10,9 +10,8 @@ while True:
         break
     a.append({"role": "user", "content": x})
 
-    response = response = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=200,
+    response = client.messages.create(model="claude-sonnet-4-6",
+    max_tokens=200,
             messages=a,
             system="Return ONLY valid JSON with no markdown, no backticks, no explanation. Just the raw JSON with fields: name, capital, population, language")
     print("API response received") 
